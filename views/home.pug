@@ -1,9 +1,11 @@
-doctype html
-head 
-    title StepUp
-    style
-        include ../static/style.css 
-body 
+extends base.pug
+
+block scripts
+    script(src='/static/index.js')
+block style 
+    style 
+        include ../static/style.css
+block content 
     nav#navbar
         ul
             div#logo
@@ -52,8 +54,3 @@ body
                     li Intensive Training.
                     li Skill Development.
                     li Performance Opportunities.
-
-    section#footer
-        | Copyright © 2024 StepUp Studio | All rights reserved
-    script 
-        include ../static/index.js

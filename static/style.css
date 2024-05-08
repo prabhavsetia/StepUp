@@ -8,6 +8,18 @@
     font-family: "PT Sans", sans-serif;
 }
 
+#logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin: 0px 14px;
+}
+
+#logo img {
+    height: 30px;
+    filter: invert(1);
+}
+
 #navbar {
     background-color: #749fa8;
     padding: 13px 14px;
@@ -16,9 +28,7 @@
 #navbar ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
-
+    align-items: center;
 }
 
 #navbar li {
@@ -28,9 +38,11 @@
 #navbar li a {
     text-decoration: none;
     padding: 6px 17px;
+    font-size: 20px;
     color: white;
 }
-#navbar li a:hover{
+
+#navbar li a:hover {
     color: rgb(0, 0, 0);
 }
 
@@ -41,7 +53,7 @@
     align-items: center;
     height: 700px;
     background-color: red;
-    background: url(static/bg.jpg)no-repeat center / cover;
+    background: url(../static/bg.jpg)no-repeat center / cover;
     opacity: 100%;
 }
 
@@ -63,20 +75,104 @@
 }
 
 
-#sponsorsSection {
-    height: 300px;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    /* background: linear-gradient(to bottom, rgba(45, 45, 45, 0.755), rgba(0, 0, 0, 0.96)), #000000; */
-    justify-content: center;
-    color: #ffffff;
-    font-family: "Quicksand", sans-serif;
-    font-size: 1.7rem;
+#missionSection {
+    height: fit-content;
+    width: 100%;
+    margin: auto;
     padding: 20px;
+    background-color: #000;
+    background: #000;
+    color: #ffffff;
+
 
 }
 
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: center;
+}
+
+#missionSection h2 {
+    text-align: center;
+    padding: 12px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.7rem;
+
+}
+
+.card {
+    display: inline-block;
+    background-color: #131313c7;
+    border: 2px solid rgba(27, 27, 27, 0.805);
+    border-radius: 5px;
+    margin: 20px;
+    height: auto;
+    width: auto;
+    max-width: 26%;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 12px;
+
+}
+
+.card p {
+    padding: 2px 44px 20px;
+
+}
+
+#servicesSection {
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    background-color: black;
+    font-size: 1.7rem;
+    height: 450px;
+}
+
+#servicesSection h2 {
+    text-align: center;
+    padding: 12px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.7rem;
+
+}
+
+.card-price {
+    display: inline-block;
+    background-color: #131313c7;
+    border: 2px solid rgba(27, 27, 27, 0.805);
+    border-radius: 10px;
+    margin: 20px;
+    height: auto;
+    width: auto;
+    max-width: 26%;
+}
+.card-price h3{
+    margin: 10px;
+}
+
+.price {
+    padding: 15px 10px;
+    list-style: none;
+    font-size: 16px;
+}
+
+.price li {
+    padding: 12px 5px;
+}
+
 #footer {
-    height: 100px;
-    background-color: blue;
+    display: flex;
+    color: white;
+    background-color: #749fa8;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-size: 20px;
+
 }
