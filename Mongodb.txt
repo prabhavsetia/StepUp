@@ -39,10 +39,19 @@ db.details.find({
     })
 
 //Delete statment
-
 --Inserting in duplicates
 db.details.insertMany([{name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"},
                     {name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"},
                     {name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"}])
+
 db.details.deleteOne({name: "babli"})
 db.details.deleteMany({name: "babli"})
+
+
+//Updating data in database
+--insert mock data
+db.details.insertOne({name: "jack"})
+
+db.details.updateOne({name:"jack"},{$set: {name:"Prabhav!"}})
+db.details.updateOne({name:"Prabhav!"},{$set: {phoneNo: 834639269,email: "prabha.setia@gmail.com"}})
+db.details.updateMany({name:"Prabhav!"},{$set: {phoneNo: 834639269,email: "prabha.setia@gmail.com"}})
