@@ -1,0 +1,48 @@
+show dbs
+use StepUp
+
+//inserting data in mongoDB
+db.details.insertOne({name:"Prabhav", phoneNo:8288086868, email:"prabhav.setia333@gmail.com"})
+
+db.details.insertMany([{name:"Sangeeta", phoneNo:9835748290, email:"sageetasetia@gmail.com"},
+                    {name:"surinder", phoneNo:6492074839, email:"surinder.handa@gmail.com"},
+                    {name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"}])
+
+//Search for data in mongoDB
+db.details.find()
+
+db.details.find({name:"Prabhav"})
+
+//Greater than value
+db.details.find({phoneNo:{$gt: 6836574927}})  //will show value >6836574927
+db.details.find({price: {$gte: 3000}}) //will show value =>3000
+db.details.find({price: {$gt: 3000}})  //will show value >3000
+
+//Lesser Than Value
+db.details.find({price: {$lte: 3000}})  //will show value =<3000
+db.details.find({price: {$lt: 3000}})  //will show value <3000
+
+//and statment
+db.details.find({price: {$lt: 3000}},{rating: {$gt: 3.5}})
+
+//OR statment
+db.details.find({ 
+    $or:
+    [
+        {price: 
+            {$lt: 3000}
+        },
+        {rating: 
+            {$gt: 3.5}
+        }
+    ]
+    })
+
+//Delete statment
+
+--Inserting in duplicates
+db.details.insertMany([{name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"},
+                    {name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"},
+                    {name:"babli", phoneNo:9836574927, email:"bbli.negi@gmail.com"}])
+db.details.deleteOne({name: "babli"})
+db.details.deleteMany({name: "babli"})

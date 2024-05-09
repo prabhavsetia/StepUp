@@ -6,6 +6,15 @@ html
     block scripts
     block style 
   body
+    nav#navbar
+        ul
+            div#logo
+                img(src="static/logo.png")
+                | StepUp Studio
+            li #[a(href = "/") Home] 
+            li #[a(href = "/") About] 
+            li #[a(href = "/") Services] 
+            li #[a(href = "/contact") Contact Us] 
     block content
     section#footer
         | Copyright © 2024 StepUp Studio | All rights reserved

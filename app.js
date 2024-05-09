@@ -17,6 +17,10 @@ app.get('/',(req, res)=>{
     const params = {}
     res.status(200).render('home.pug',params);
 })
+app.get('/contact',(req, res)=>{
+    const params = {}
+    res.status(200).render('contact.pug',params);
+})
 
 // START THE SERVER
 app.listen(port, ()=>{
