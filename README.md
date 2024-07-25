@@ -70,11 +70,9 @@ If you want to contribute to this project, please fork the repository and create
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## 📫 Contact
 
-For any inquiries or feedback, please contact:
+For any inquiries or feedback, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/prabhavsetia/).
 
-- **Email**: Prabhav.setia333@gmail.com
-- **Phone**: +91-9876543201
 
 Thank you for visiting StepUp Studio!
